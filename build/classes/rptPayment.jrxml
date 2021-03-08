@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="390564b3-658d-4d81-957a-de61c656c3d8">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     bill_payment.`ID` AS bill_payment_ID,
+     bill_payment.`ConsID_MeterID` AS bill_payment_ConsID_MeterID,
+     bill_payment.`Date` AS bill_payment_Date,
+     bill_payment.`Amount_Paid` AS bill_payment_Amount_Paid,
+     bill_payment.`Month` AS bill_payment_Month
+FROM
+     `bill_payment` bill_payment]]>
+	</queryString>
+	<field name="bill_payment_ID" class="java.lang.Integer"/>
+	<field name="bill_payment_ConsID_MeterID" class="java.lang.Integer"/>
+	<field name="bill_payment_Date" class="java.lang.String"/>
+	<field name="bill_payment_Amount_Paid" class="java.lang.Double"/>
+	<field name="bill_payment_Month" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="46" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="c9e6f5b6-849c-4e3f-a5ce-16f67d05542d"/>
+			</line>
+			<line>
+				<reportElement x="0" y="45" width="555" height="1" uuid="2f5706eb-aed4-423e-a529-92cb5b7ab3fb"/>
+			</line>
+			<staticText>
+				<reportElement x="214" y="1" width="154" height="30" uuid="047a3fbd-947e-41e1-917e-6ee80763bb2e"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Payment Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="8" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="44" width="555" height="1" uuid="885bccc7-1c9b-4ba3-a8d3-a1020e2afc5d"/>
+			</line>
+			<staticText>
+				<reportElement x="13" y="2" width="53" height="20" uuid="b600afca-366a-4f4e-b105-bf7adeb93327"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="91" y="2" width="123" height="20" uuid="abd13810-0bd8-4278-b38f-6656cb556e6f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ConsID/MeterID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="214" y="0" width="100" height="20" uuid="2a430145-3c23-4a5c-ba17-f1c223304061"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Date ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="2" width="100" height="20" uuid="86c26c48-c60b-4ec4-b0bd-575513f251a9"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount Paid]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="326" y="2" width="112" height="20" uuid="ab581ff5-0116-4f39-97e7-848faf8d22e8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Payment Month]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="50" width="555" height="1" uuid="70eb3353-2b01-4581-83f0-3637d4277893"/>
+			</line>
+			<textField>
+				<reportElement x="13" y="0" width="53" height="20" uuid="eb30e624-6aca-4dc6-9274-84a8ceee4ab7"/>
+				<textFieldExpression><![CDATA[$F{bill_payment_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="91" y="0" width="100" height="20" uuid="cde1c6c5-563a-4114-9c68-65ef5ef6ea12"/>
+				<textFieldExpression><![CDATA[$F{bill_payment_ConsID_MeterID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="214" y="0" width="100" height="20" uuid="480a0a47-3b1b-41be-bb4c-62da7d8e9847"/>
+				<textFieldExpression><![CDATA[$F{bill_payment_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="a241ff3a-623f-479d-9267-99a33bccd4a1"/>
+				<textFieldExpression><![CDATA[$F{bill_payment_Amount_Paid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="326" y="0" width="100" height="20" uuid="a6ffff33-f8ca-4b7b-9c2d-5a0e4f988c6c"/>
+				<textFieldExpression><![CDATA[$F{bill_payment_Month}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="6" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

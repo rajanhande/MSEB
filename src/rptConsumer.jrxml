@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0bccddae-b7bc-4af4-9950-64926893177d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     consumer_details.`ID` AS consumer_details_ID,
+     consumer_details.`Name` AS consumer_details_Name,
+     consumer_details.`Meter_ID` AS consumer_details_Meter_ID,
+     consumer_details.`Meter_Type` AS consumer_details_Meter_Type,
+     consumer_details.`Mobile_NO` AS consumer_details_Mobile_NO,
+     consumer_details.`Adhar_NO` AS consumer_details_Adhar_NO,
+     consumer_details.`Address` AS consumer_details_Address,
+     consumer_details.`Star_Date` AS consumer_details_Star_Date
+FROM
+     `consumer_details` consumer_details]]>
+	</queryString>
+	<field name="consumer_details_ID" class="java.lang.Integer"/>
+	<field name="consumer_details_Name" class="java.lang.String"/>
+	<field name="consumer_details_Meter_ID" class="java.lang.Integer"/>
+	<field name="consumer_details_Meter_Type" class="java.lang.String"/>
+	<field name="consumer_details_Mobile_NO" class="java.lang.String"/>
+	<field name="consumer_details_Adhar_NO" class="java.lang.String"/>
+	<field name="consumer_details_Address" class="java.lang.String"/>
+	<field name="consumer_details_Star_Date" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="48" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-1" width="555" height="1" uuid="be6c9e25-c440-4648-8499-d1158c0a7644"/>
+			</line>
+			<line>
+				<reportElement x="0" y="47" width="555" height="1" uuid="0a2855ed-58dc-44ee-a551-4d124300ea37"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="7" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="46" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="45" width="555" height="1" uuid="b43be706-0155-4a1d-a5fb-8923f5704855"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="33" height="20" uuid="d1803068-1568-43bf-b35c-2d97186bb506"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="33" y="0" width="72" height="20" uuid="09f80008-0f96-420c-a470-dd237e9d55c8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="116" y="0" width="67" height="20" uuid="9fe88d9d-2733-480c-ac18-a0814c33554f"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Meter ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="100" height="20" uuid="6ea3cf4b-6cbd-4a42-b24b-7c23ee7b1ada"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mobile No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="79" height="20" uuid="81784f4e-55b4-4f50-8bbe-878d111cf7f7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="479" y="0" width="76" height="20" uuid="7c7517a5-6f49-46da-b601-d378ce9c6818"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Star Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="193" y="0" width="100" height="20" uuid="1794655d-fa0e-4f91-94e1-9d7fc2d7a133"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Meter Type]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="46" width="555" height="1" uuid="227d2a71-4013-466e-9d69-edcd132b9250"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="33" height="20" uuid="776f37ce-e377-4d51-8920-bb9f5cb19a1b"/>
+				<textFieldExpression><![CDATA[$F{consumer_details_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="33" y="0" width="72" height="20" uuid="ff9b5dd9-45bf-4d14-a12e-ed5825528553"/>
+				<textFieldExpression><![CDATA[$F{consumer_details_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="116" y="0" width="67" height="20" uuid="d37ce8a3-0a99-45e4-b18c-c4b5a988c2b0"/>
+				<textFieldExpression><![CDATA[$F{consumer_details_Meter_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="100" height="20" uuid="d997d89f-b766-4e79-881d-9255be56c566"/>
+				<textFieldExpression><![CDATA[$F{consumer_details_Mobile_NO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="79" height="20" uuid="66eca314-b35d-4cb9-915e-bcad8e1be9c7"/>
+				<textFieldExpression><![CDATA[$F{consumer_details_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="0" width="76" height="20" uuid="a572e5d8-7bd4-493e-80b9-475bf862f534"/>
+				<textFieldExpression><![CDATA[$F{consumer_details_Star_Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="193" y="0" width="100" height="20" uuid="651cab64-1608-4ce0-986a-2766cd92c8d0"/>
+				<textFieldExpression><![CDATA[$F{consumer_details_Meter_Type}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="8" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

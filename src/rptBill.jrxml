@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="061b9c34-76bf-4dfa-94df-df3a8b82cace">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     assign_bills.`ID` AS assign_bills_ID,
+     assign_bills.`ConsID_MeterID` AS assign_bills_ConsID_MeterID,
+     assign_bills.`Previous_Unit` AS assign_bills_Previous_Unit,
+     assign_bills.`Current_unit` AS assign_bills_Current_unit,
+     assign_bills.`Amount` AS assign_bills_Amount,
+     assign_bills.`Last_Date` AS assign_bills_Last_Date
+FROM
+     `assign_bills` assign_bills]]>
+	</queryString>
+	<field name="assign_bills_ID" class="java.lang.Integer"/>
+	<field name="assign_bills_ConsID_MeterID" class="java.lang.Integer"/>
+	<field name="assign_bills_Previous_Unit" class="java.lang.Double"/>
+	<field name="assign_bills_Current_unit" class="java.lang.Double"/>
+	<field name="assign_bills_Amount" class="java.lang.Double"/>
+	<field name="assign_bills_Last_Date" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="44" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="0" width="555" height="1" uuid="7cb83ced-11e5-4879-99d7-21c204fd3de9"/>
+			</line>
+			<line>
+				<reportElement x="0" y="41" width="555" height="1" uuid="cfb3a841-5ebc-4305-a70f-b04e74040777"/>
+			</line>
+			<staticText>
+				<reportElement x="222" y="1" width="182" height="24" uuid="da0ef211-00ce-42c4-a056-1bd975bc97bd"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pending Bill Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="8" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="43" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="42" width="555" height="1" uuid="cd4b835c-715f-490d-bdb7-b622098104eb"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="32" height="20" uuid="2f974626-0bef-44c9-b433-0140788776ee"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="49" y="0" width="76" height="20" uuid="ca68839a-954c-45ca-870d-2b0b568aaa33"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Mter/Cons ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="139" y="2" width="100" height="20" uuid="1b9f6217-7be7-4fb2-ab24-1fba95b31b81"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Previous Unit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="255" y="2" width="100" height="20" uuid="f383772d-a512-404f-b37c-ade3d5831f17"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Current Unit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="367" y="2" width="74" height="20" uuid="d5676002-1241-4eb7-8cd4-29145be62a70"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="455" y="2" width="100" height="20" uuid="7216d2f9-ffc1-4543-8667-46ad372a45c6"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="45" width="555" height="1" uuid="ad1b059e-35ea-4dcd-ac36-0cf04299ef86"/>
+			</line>
+			<textField>
+				<reportElement x="0" y="0" width="32" height="20" uuid="780322ca-6d51-461a-a513-16725798048a"/>
+				<textFieldExpression><![CDATA[$F{assign_bills_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="49" y="0" width="48" height="20" uuid="ce2cdb83-36ac-4a43-a256-56ebdbef3185"/>
+				<textFieldExpression><![CDATA[$F{assign_bills_ConsID_MeterID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="0" width="71" height="20" uuid="7cc2daf5-b180-42ab-af1d-1a62b1781733"/>
+				<textFieldExpression><![CDATA[$F{assign_bills_Previous_Unit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="255" y="0" width="74" height="20" uuid="2adebe57-e5a1-4112-a715-c45cdf20f86e"/>
+				<textFieldExpression><![CDATA[$F{assign_bills_Current_unit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="367" y="0" width="74" height="20" uuid="73b99879-1d12-4637-be4c-8ef98f03c97f"/>
+				<textFieldExpression><![CDATA[$F{assign_bills_Amount}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="0" width="100" height="20" uuid="155a94f8-7fda-44e7-8ca9-ab146cb1aaf7"/>
+				<textFieldExpression><![CDATA[$F{assign_bills_Last_Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="8" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
